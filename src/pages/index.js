@@ -1,6 +1,7 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
+import FeaturedCategories from "@/components/UI/FeaturedCategories";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       </Head>
       <RootLayout>
         <FeaturedProducts />
+        <FeaturedCategories />
       </RootLayout>
     </>
   );
