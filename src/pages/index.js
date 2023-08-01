@@ -1,5 +1,6 @@
 import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
+import FeaturedProducts from "@/components/UI/FeaturedProducts";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RootLayout>
+        <FeaturedProducts />
       </RootLayout>
     </>
   );
