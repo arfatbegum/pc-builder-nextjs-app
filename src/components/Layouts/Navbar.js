@@ -63,7 +63,7 @@ const Navbar = () => {
             <div class="bg-green-600 container mx-auto flex flex-wrap p-5 md:flex-row flex-col items-center justify-between">
                 <div className='flex'>
                     <Link
-                        href="/"
+                        href="/pc-builder"
                         className='font-bold text-xl text-white hover:text-white'
                     >
                         PC BUILDER
