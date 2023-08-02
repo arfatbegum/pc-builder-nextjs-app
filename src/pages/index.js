@@ -3,7 +3,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
 
-const HomePage = () => {
+const HomePage = ({ categories, products }) => {
   return (
     <>
       <Head>
@@ -16,8 +16,8 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RootLayout>
-        <FeaturedProducts />
-        <FeaturedCategories />
+        <FeaturedProducts products={products} />
+        <FeaturedCategories categories={categories} />
       </RootLayout>
     </>
   );
@@ -28,3 +28,18 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export default HomePage;
+
+export const getStaticProps = async () => {
+  const categoryResponse = await fetch(`http://localhost:3000/api/categories`);
+  const productRespons = await fetch(`http://localhost:3000/api/products`);
+
+  const categories = await categoryResponse.json();
+  const products = await productRespons.json();
+  console.log(products)
+  return {
+    props: {
+      categories,
+      products
+    }
+  };
+};
