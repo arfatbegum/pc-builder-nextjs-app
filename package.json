@@ -14,12 +14,28 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "mongodb": "^5.7.0",
     "next": "13.4.12",
+    "next-auth": "^4.22.3",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-rating-stars-component": "^2.2.0",
     "tailwindcss": "3.3.3"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arfatbegum/pc-builder-nextjs-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arfatbegum/pc-builder-nextjs-app/issues"
+  },
+  "homepage": "https://github.com/arfatbegum/pc-builder-nextjs-app#readme"
 }
