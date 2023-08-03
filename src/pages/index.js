@@ -35,7 +35,7 @@ export const getStaticProps = async () => {
 
   const categories = await categoryResponse.json();
   const products = await productRespons.json();
-  console.log(products)
+
   return {
     props: {
       categories,

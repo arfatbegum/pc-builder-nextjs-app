@@ -15,7 +15,7 @@ async function run(req, res) {
         const productsCollection = client.db("pc-builder").collection("products");
 
         if (req.method === "GET") {
-            const { productId } = req.query; // Use req.query instead of req.params
+            const { productId } = req.query; 
 
             if (!productId) {
                 return res.status(400).send({

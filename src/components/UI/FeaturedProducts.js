@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 
 const FeaturedProducts = ({ products }) => {
-    console.log(products?.data)
+
     return (
         <section class="text-gray-700 body-font">
             <div class="container px-10 py-7 mx-auto">

@@ -7,7 +7,7 @@ const items = [
     {
         key: '1',
         label: (
-            <Link href="/categories/processor" >
+            <Link href="/category/processor" >
                 CPU / Processor
             </Link>
         ),
@@ -15,7 +15,7 @@ const items = [
     {
         key: '2',
         label: (
-            <Link href="/categories/motherboard" >
+            <Link href="/category/motherboard" >
                 Motherboard
             </Link>
         ),
@@ -23,7 +23,7 @@ const items = [
     {
         key: '3',
         label: (
-            <Link href="/categories/ram" >
+            <Link href="/category/ram" >
                 RAM
             </Link>
         ),
@@ -31,7 +31,7 @@ const items = [
     {
         key: '4',
         label: (
-            <Link href="/categories/power-supply-unit" >
+            <Link href="/category/psu" >
                 Power Supply Unit
             </Link>
         ),
@@ -39,7 +39,7 @@ const items = [
     {
         key: '5',
         label: (
-            <Link href="/categories/storage-device" >
+            <Link href="/category/storage" >
                 Storage Device
             </Link>
         ),
@@ -47,13 +47,13 @@ const items = [
     {
         key: '6',
         label: (
-            <Link href="/categories/monitor" > Monitor </Link>
+            <Link href="/category/monitor" > Monitor </Link>
         ),
     },
     {
         key: '7',
         label: (
-            <Link href="/categories/others" > Others </Link>
+            <Link href="/category/others" > Others </Link>
         ),
     },
 ];
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div class="bg-green-600 container mx-auto flex flex-wrap p-5 md:flex-row flex-col items-center justify-between">
                 <div className='flex'>
                     <Link
-                        href="/pc-builder"
+                        href="/"
                         className='font-bold text-xl text-white hover:text-white'
                     >
                         PC BUILDER

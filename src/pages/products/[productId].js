@@ -59,9 +59,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
     const { params } = context;
     const res = await fetch(`http://localhost:3000/api/product/${params.productId}`);
-    console.log(res);
     const product = await res.json();
-    console.log(product);
 
     return {
         props: {
