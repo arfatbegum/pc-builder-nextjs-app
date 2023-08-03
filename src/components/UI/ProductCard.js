@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
                 </div>
             </div>
             <div className="flex flex-col top-4 right-4 space-y-2 absolute opacity-0 group-hover:opacity-100 transition duration-500">
-                <Link href={`/product/${_id}`} className=' bg-white border-2 border-gray-200'>
+                <Link href={`/products/${_id}`} className=' bg-white border-2 border-gray-200'>
                     <AiOutlineEye className='text-xl text-green-600 m-2' />
                 </Link>
                 <button className=' bg-white border-2 border-gray-200'>

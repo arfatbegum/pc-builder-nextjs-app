@@ -16,23 +16,29 @@ import Stripe from '@/assets/icons/stripe.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const ProductInfo = () => {
+const ProductInfo = ({ product }) => {
+    const { name, category, price, status, reviews } = product?.data;
+
+    // Calculate average rating
+    const totalReviews = reviews?.length;
+    const averageRating = totalReviews ? reviews.reduce((acc, review) => acc + review.rating, 0) / totalReviews : 0;
     return (
         <div className="lg:w-2/3 w-full lg:p-8 p-2 flex justify-start items-start flex-col">
             <div className='lg:flex items-center'>
                 <div className='lg:w-1/2 w-full'>
-                    <h2 className=" lg:text-2xl text-xl text-gray-800 font-semibold">Plain White Tshirt</h2>
+                    <p className=" font-normal text-sm leading-3 hover:text-gray-700 duration-100 cursor-pointer text-green-600 underline mb-2">{category}</p>
+                    <h2 className=" lg:text-2xl text-xl text-gray-800 font-semibold">{name}</h2>
                     <div className="flex justify-start items-center gap-4">
                         <ReactStars
                             count={5}
                             size={22}
-                            value={3}
+                            value={averageRating}
                             edit={false}
                             activeColor="#e6bd00"
                         />
-                        <p className=" font-normal text-sm leading-3 hover:text-gray-700 duration-100 cursor-pointer text-gray-500 underline">18 reviews</p>
+                        <p className=" font-normal text-sm leading-3 hover:text-gray-700 duration-100 cursor-pointer text-gray-500 underline">{reviews?.length} Reviews</p>
                     </div>
-                    <p className="font-bold text-2xl leading-6 text-primary mr-4 my-4">$190.00<span className=" font-semibold text-sm leading-3 hover:text-gray-700 duration-100  text-green-600 ml-2"> (In Stock)</span></p>
+                    <p className="font-bold text-2xl leading-6 text-primary mr-4 my-4">${price}<span className=" font-semibold text-sm leading-3 hover:text-gray-700 duration-100  text-green-600 ml-2"> ({status})</span></p>
 
                     <div className="flex space-x-2 mt-7">
                         <button className='flex items-center bg-green-600 text-white text-sm font-bold border-2 border-primary shadow-sm rounded bottom-4 px-6 py-2'>

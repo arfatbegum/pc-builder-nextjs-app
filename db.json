@@ -1,0 +1,732 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "https://example.com/cpu1.jpg",
+      "name": "Intel Core i9-9900K",
+      "category": "CPU / Processor",
+      "price": 399.99,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Intel Core i9-9900K is a high-performance CPU designed for gaming and intensive tasks.",
+      "keyFeatures": [
+        "8 cores",
+        "16 threads",
+        "Base clock: 3.6GHz",
+        "Max Turbo clock: 5.0GHz"
+      ],
+      "reviews": [
+        {
+          "user": "JohnDoe",
+          "rating": 5,
+          "comment": "Amazing performance, runs everything smoothly!"
+        },
+        {
+          "user": "JaneSmith",
+          "rating": 4,
+          "comment": "Great CPU for gaming and productivity tasks."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "image": "https://example.com/cpu2.jpg",
+      "name": "AMD Ryzen 7 5800X",
+      "category": "CPU / Processor",
+      "price": 389.0,
+      "status": "In Stock",
+      "rating": 4.9,
+      "description": "The AMD Ryzen 7 5800X offers excellent multi-core performance and is great for content creation.",
+      "keyFeatures": [
+        "8 cores",
+        "16 threads",
+        "Base clock: 3.8GHz",
+        "Max Boost clock: 4.7GHz"
+      ],
+      "reviews": [
+        {
+          "user": "JohnDoe",
+          "rating": 5,
+          "comment": "Amazing performance, runs everything smoothly!"
+        },
+        {
+          "user": "JaneSmith",
+          "rating": 4,
+          "comment": "Great CPU for gaming and productivity tasks."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "image": "https://example.com/cpu3.jpg",
+      "name": "Intel Core i7-10700K",
+      "category": "CPU / Processor",
+      "price": 329.99,
+      "status": "Out of Stock",
+      "rating": 4.6,
+      "description": "The Intel Core i7-10700K is a powerful CPU for gaming and heavy multitasking.",
+      "keyFeatures": [
+        "8 cores",
+        "16 threads",
+        "Base clock: 3.8GHz",
+        "Max Turbo clock: 5.1GHz"
+      ]
+    },
+    {
+      "id": "4",
+      "image": "https://example.com/cpu4.jpg",
+      "name": "AMD Ryzen 5 5600X",
+      "category": "CPU / Processor",
+      "price": 249.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The AMD Ryzen 5 5600X is a mid-range CPU offering excellent value and gaming performance.",
+      "keyFeatures": [
+        "6 cores",
+        "12 threads",
+        "Base clock: 3.7GHz",
+        "Max Boost clock: 4.6GHz"
+      ]
+    },
+    {
+      "id": "5",
+      "image": "https://example.com/cpu5.jpg",
+      "name": "Intel Core i5-11600K",
+      "category": "CPU / Processor",
+      "price": 259.0,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The Intel Core i5-11600K is a solid gaming CPU with a good balance of performance and price.",
+      "keyFeatures": [
+        "6 cores",
+        "12 threads",
+        "Base clock: 3.9GHz",
+        "Max Turbo clock: 4.9GHz"
+      ]
+    },
+    {
+      "id": "6",
+      "image": "https://example.com/motherboard1.jpg",
+      "name": "ASUS ROG Strix Z590-E Gaming",
+      "category": "Motherboard",
+      "price": 349.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The ASUS ROG Strix Z590-E Gaming is a feature-packed motherboard for high-end gaming systems.",
+      "keyFeatures": [
+        "Intel Z590 chipset",
+        "Supports 10th and 11th Gen Intel CPUs",
+        "ATX form factor",
+        "Dual M.2 slots"
+      ]
+    },
+    {
+      "id": "7",
+      "image": "https://example.com/motherboard2.jpg",
+      "name": "MSI MPG B550 Gaming Carbon WiFi",
+      "category": "Motherboard",
+      "price": 189.0,
+      "status": "In Stock",
+      "rating": 4.6,
+      "description": "The MSI MPG B550 Gaming Carbon WiFi is a reliable motherboard with built-in Wi-Fi support.",
+      "keyFeatures": [
+        "AMD B550 chipset",
+        "Supports AMD Ryzen CPUs",
+        "ATX form factor",
+        "Built-in Wi-Fi 6"
+      ]
+    },
+    {
+      "id": "8",
+      "image": "https://example.com/motherboard3.jpg",
+      "name": "GIGABYTE B450 AORUS PRO",
+      "category": "Motherboard",
+      "price": 129.99,
+      "status": "Out of Stock",
+      "rating": 4.5,
+      "description": "The GIGABYTE B450 AORUS PRO is a budget-friendly motherboard for AMD Ryzen processors.",
+      "keyFeatures": [
+        "AMD B450 chipset",
+        "Supports AMD Ryzen CPUs",
+        "ATX form factor",
+        "Dual PCIe x16 slots"
+      ]
+    },
+    {
+      "id": "9",
+      "image": "https://example.com/motherboard4.jpg",
+      "name": "ASRock X570 Taichi",
+      "category": "Motherboard",
+      "price": 279.99,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The ASRock X570 Taichi is a high-end motherboard with robust power delivery for overclocking.",
+      "keyFeatures": [
+        "AMD X570 chipset",
+        "Supports AMD Ryzen CPUs",
+        "ATX form factor",
+        "14-phase power design"
+      ]
+    },
+    {
+      "id": "10",
+      "image": "https://example.com/motherboard5.jpg",
+      "name": "MSI MAG B460M Mortar WiFi",
+      "category": "Motherboard",
+      "price": 109.0,
+      "status": "In Stock",
+      "rating": 4.4,
+      "description": "The MSI MAG B460M Mortar WiFi is a compact motherboard with built-in Wi-Fi support.",
+      "keyFeatures": [
+        "Intel B460 chipset",
+        "Supports 10th Gen Intel CPUs",
+        "Micro-ATX form factor",
+        "Built-in Wi-Fi 6"
+      ]
+    },
+    {
+      "id": "11",
+      "image": "https://example.com/ram1.jpg",
+      "name": "Corsair Vengeance LPX 16GB (2x8GB) DDR4 3200MHz",
+      "category": "RAM",
+      "price": 89.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The Corsair Vengeance LPX RAM kit offers reliable performance and is great for gaming.",
+      "keyFeatures": [
+        "16GB (2x8GB) DDR4 memory",
+        "3200MHz memory speed",
+        "Low-profile design",
+        "XMP 2.0 support"
+      ]
+    },
+    {
+      "id": "12",
+      "image": "https://example.com/ram2.jpg",
+      "name": "G.Skill Trident Z RGB 32GB (2x16GB) DDR4 3600MHz",
+      "category": "RAM",
+      "price": 189.0,
+      "status": "In Stock",
+      "rating": 4.9,
+      "description": "The G.Skill Trident Z RGB RAM kit combines performance with customizable RGB lighting.",
+      "keyFeatures": [
+        "32GB (2x16GB) DDR4 memory",
+        "3600MHz memory speed",
+        "RGB lighting",
+        "XMP 2.0 support"
+      ]
+    },
+    {
+      "id": "13",
+      "image": "https://example.com/ram3.jpg",
+      "name": "Kingston HyperX Fury 8GB DDR4 2666MHz",
+      "category": "RAM",
+      "price": 49.99,
+      "status": "Out of Stock",
+      "rating": 4.5,
+      "description": "The Kingston HyperX Fury RAM is a cost-effective choice for entry-level systems.",
+      "keyFeatures": [
+        "8GB DDR4 memory",
+        "2666MHz memory speed",
+        "Heat spreader for cooling",
+        "Plug-and-Play"
+      ]
+    },
+    {
+      "id": "14",
+      "image": "https://example.com/ram4.jpg",
+      "name": "Crucial Ballistix 64GB (2x32GB) DDR4 3200MHz",
+      "category": "RAM",
+      "price": 299.99,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Crucial Ballistix RAM kit offers high capacity for content creators and professionals.",
+      "keyFeatures": [
+        "64GB (2x32GB) DDR4 memory",
+        "3200MHz memory speed",
+        "Low-latency performance",
+        "XMP 2.0 support"
+      ]
+    },
+    {
+      "id": "15",
+      "image": "https://example.com/ram5.jpg",
+      "name": "Teamgroup T-Force Dark Za 16GB (2x8GB) DDR4 3600MHz",
+      "category": "RAM",
+      "price": 109.0,
+      "status": "In Stock",
+      "rating": 4.6,
+      "description": "The Teamgroup T-Force Dark Za RAM kit offers a balance of performance and affordability.",
+      "keyFeatures": [
+        "16GB (2x8GB) DDR4 memory",
+        "3600MHz memory speed",
+        "Aluminum heat spreader",
+        "XMP 2.0 support"
+      ]
+    },
+    {
+      "id": "16",
+      "image": "https://example.com/psu1.jpg",
+      "name": "Corsair RM750x, 750W 80+ Gold",
+      "category": "Power Supply Unit",
+      "price": 129.99,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Corsair RM750x is a high-quality PSU with efficient power delivery and quiet operation.",
+      "keyFeatures": [
+        "750W power output",
+        "80+ Gold efficiency",
+        "Fully modular cables",
+        "Zero RPM fan mode"
+      ]
+    },
+    {
+      "id": "17",
+      "image": "https://example.com/psu2.jpg",
+      "name": "EVGA Supernova 850 G5, 850W 80+ Gold",
+      "category": "Power Supply Unit",
+      "price": 149.0,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The EVGA Supernova 850 G5 offers high wattage and excellent efficiency for demanding systems.",
+      "keyFeatures": [
+        "850W power output",
+        "80+ Gold efficiency",
+        "Fully modular cables",
+        "Ultra-quiet operation"
+      ]
+    },
+    {
+      "id": "18",
+      "image": "https://example.com/psu3.jpg",
+      "name": "Seasonic Focus GX-650, 650W 80+ Gold",
+      "category": "Power Supply Unit",
+      "price": 99.99,
+      "status": "Out of Stock",
+      "rating": 4.6,
+      "description": "The Seasonic Focus GX-650 is a reliable PSU with high efficiency and stable performance.",
+      "keyFeatures": [
+        "650W power output",
+        "80+ Gold efficiency",
+        "Fully modular cables",
+        "Hybrid silent fan control"
+      ]
+    },
+    {
+      "id": "19",
+      "image": "https://example.com/psu4.jpg",
+      "name": "Cooler Master MWE 750 White V2, 750W 80+ White",
+      "category": "Power Supply Unit",
+      "price": 89.99,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The Cooler Master MWE 750 White V2 offers budget-friendly power delivery for mainstream systems.",
+      "keyFeatures": [
+        "750W power output",
+        "80+ White efficiency",
+        "Semi-modular cables",
+        "120mm HDB fan"
+      ]
+    },
+    {
+      "id": "20",
+      "image": "https://example.com/psu5.jpg",
+      "name": "Thermaltake Smart BX1 RGB 650W 80+ Bronze",
+      "category": "Power Supply Unit",
+      "price": 79.0,
+      "status": "In Stock",
+      "rating": 4.4,
+      "description": "The Thermaltake Smart BX1 RGB 650W PSU offers decent performance with RGB lighting.",
+      "keyFeatures": [
+        "650W power output",
+        "80+ Bronze efficiency",
+        "Non-modular cables",
+        "RGB lighting"
+      ]
+    },
+    {
+      "id": "21",
+      "image": "https://example.com/storage1.jpg",
+      "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
+      "category": "Storage Device",
+      "price": 199.99,
+      "status": "In Stock",
+      "rating": 4.9,
+      "description": "The Samsung 970 EVO Plus is a high-speed NVMe SSD, ideal for gaming and content creation.",
+      "keyFeatures": [
+        "1TB storage capacity",
+        "NVMe PCIe 3.0 interface",
+        "Read speed: up to 3500 MB/s",
+        "Write speed: up to 3300 MB/s"
+      ]
+    },
+    {
+      "id": "22",
+      "image": "https://example.com/storage2.jpg",
+      "name": "WD Blue 4TB SATA SSD",
+      "category": "Storage Device",
+      "price": 499.0,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The WD Blue 4TB SATA SSD offers a high capacity for storing large amounts of data.",
+      "keyFeatures": [
+        "4TB storage capacity",
+        "SATA III interface",
+        "Read speed: up to 560 MB/s",
+        "Write speed: up to 530 MB/s"
+      ]
+    },
+    {
+      "id": "23",
+      "image": "https://example.com/storage3.jpg",
+      "name": "Seagate Barracuda 2TB HDD",
+      "category": "Storage Device",
+      "price": 79.99,
+      "status": "Out of Stock",
+      "rating": 4.5,
+      "description": "The Seagate Barracuda 2TB HDD provides affordable and reliable storage for everyday use.",
+      "keyFeatures": [
+        "2TB storage capacity",
+        "SATA III interface",
+        "7200 RPM",
+        "Data transfer rate: up to 220 MB/s"
+      ]
+    },
+    {
+      "id": "24",
+      "image": "https://example.com/storage4.jpg",
+      "name": "Crucial MX500 500GB SATA SSD",
+      "category": "Storage Device",
+      "price": 109.99,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Crucial MX500 500GB SATA SSD offers a balance of performance and affordability.",
+      "keyFeatures": [
+        "500GB storage capacity",
+        "SATA III interface",
+        "Read speed: up to 560 MB/s",
+        "Write speed: up to 510 MB/s"
+      ]
+    },
+    {
+      "id": "25",
+      "image": "https://example.com/storage5.jpg",
+      "name": "ADATA SU635 240GB SATA SSD",
+      "category": "Storage Device",
+      "price": 59.0,
+      "status": "In Stock",
+      "rating": 4.4,
+      "description": "The ADATA SU635 240GB SATA SSD is an entry-level option for faster system boot times.",
+      "keyFeatures": [
+        "240GB storage capacity",
+        "SATA III interface",
+        "Read speed: up to 520 MB/s",
+        "Write speed: up to 450 MB/s"
+      ]
+    },
+    {
+      "id": "26",
+      "image": "https://example.com/monitor1.jpg",
+      "name": "ASUS ROG Swift PG279Q 27\" Gaming Monitor",
+      "category": "Monitor",
+      "price": 699.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The ASUS ROG Swift PG279Q is a high-performance gaming monitor with a 27-inch IPS display.",
+      "keyFeatures": [
+        "27-inch IPS panel",
+        "2560x1440 resolution",
+        "165Hz refresh rate",
+        "NVIDIA G-Sync technology"
+      ]
+    },
+    {
+      "id": "27",
+      "image": "https://example.com/monitor2.jpg",
+      "name": "Acer Predator XB273K 27\" 4K UHD Monitor",
+      "category": "Monitor",
+      "price": 999.0,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Acer Predator XB273K is a 4K UHD monitor with a 144Hz refresh rate, perfect for gaming and content creation.",
+      "keyFeatures": [
+        "27-inch IPS panel",
+        "3840x2160 resolution",
+        "144Hz refresh rate",
+        "NVIDIA G-Sync technology"
+      ]
+    },
+    {
+      "id": "28",
+      "image": "https://example.com/monitor3.jpg",
+      "name": "LG 34GN850-B 34\" Ultrawide Gaming Monitor",
+      "category": "Monitor",
+      "price": 799.99,
+      "status": "Out of Stock",
+      "rating": 4.6,
+      "description": "The LG 34GN850-B is an ultrawide gaming monitor with a high refresh rate and vibrant colors.",
+      "keyFeatures": [
+        "34-inch Nano IPS panel",
+        "3440x1440 resolution",
+        "160Hz refresh rate",
+        "AMD FreeSync technology"
+      ]
+    },
+    {
+      "id": "29",
+      "image": "https://example.com/monitor4.jpg",
+      "name": "Dell S2419HGF 24\" Full HD Gaming Monitor",
+      "category": "Monitor",
+      "price": 199.99,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The Dell S2419HGF is a budget-friendly gaming monitor with a fast refresh rate and low input lag.",
+      "keyFeatures": [
+        "24-inch TN panel",
+        "1920x1080 resolution",
+        "144Hz refresh rate",
+        "AMD FreeSync technology"
+      ]
+    },
+    {
+      "id": "30",
+      "image": "https://example.com/monitor5.jpg",
+      "name": "Samsung Odyssey G9 49\" Dual QHD Curved Gaming Monitor",
+      "category": "Monitor",
+      "price": 1699.0,
+      "status": "In Stock",
+      "rating": 4.9,
+      "description": "The Samsung Odyssey G9 is an immersive 49-inch curved gaming monitor with QHD resolution.",
+      "keyFeatures": [
+        "49-inch QLED panel",
+        "5120x1440 resolution",
+        "240Hz refresh rate",
+        "AMD FreeSync 2 technology"
+      ]
+    },
+    {
+      "id": "31",
+      "image": "https://example.com/gpu1.jpg",
+      "name": "NVIDIA GeForce RTX 3080",
+      "category": "Others",
+      "price": 899.99,
+      "status": "Out of Stock",
+      "rating": 4.9,
+      "description": "The NVIDIA GeForce RTX 3080 is a powerful GPU with ray tracing capabilities for gaming and content creation.",
+      "keyFeatures": [
+        "10GB GDDR6X VRAM",
+        "8704 CUDA cores",
+        "Base clock: 1440MHz",
+        "Boost clock: 1710MHz"
+      ]
+    },
+    {
+      "id": "32",
+      "image": "https://example.com/gpu2.jpg",
+      "name": "AMD Radeon RX 6800 XT",
+      "category": "Others",
+      "price": 749.0,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The AMD Radeon RX 6800 XT is a high-performance GPU with excellent raster and ray tracing performance.",
+      "keyFeatures": [
+        "16GB GDDR6 VRAM",
+        "4608 Stream Processors",
+        "Base clock: 1825MHz",
+        "Boost clock: 2250MHz"
+      ]
+    },
+    {
+      "id": "33",
+      "image": "https://example.com/gpu3.jpg",
+      "name": "MSI GeForce GTX 1660 Super Gaming X",
+      "category": "Others",
+      "price": 299.99,
+      "status": "In Stock",
+      "rating": 4.6,
+      "description": "The MSI GeForce GTX 1660 Super Gaming X offers a balance of performance and value for gamers.",
+      "keyFeatures": [
+        "6GB GDDR6 VRAM",
+        "1408 CUDA cores",
+        "Base clock: 1530MHz",
+        "Boost clock: 1830MHz"
+      ]
+    },
+    {
+      "id": "34",
+      "image": "https://example.com/gpu4.jpg",
+      "name": "ASUS ROG Strix Radeon RX 6700 XT",
+      "category": "Others",
+      "price": 599.0,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The ASUS ROG Strix Radeon RX 6700 XT is a powerful GPU for high-quality gaming experiences.",
+      "keyFeatures": [
+        "12GB GDDR6 VRAM",
+        "2560 Stream Processors",
+        "Base clock: 2581MHz",
+        "Boost clock: 2774MHz"
+      ]
+    },
+    {
+      "id": "35",
+      "image": "https://example.com/gpu5.jpg",
+      "name": "EVGA GeForce RTX 3060 XC",
+      "category": "Others",
+      "price": 399.0,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The EVGA GeForce RTX 3060 XC is a great choice for smooth 1080p gaming performance.",
+      "keyFeatures": [
+        "12GB GDDR6 VRAM",
+        "3584 CUDA cores",
+        "Base clock: 1320MHz",
+        "Boost clock: 1882MHz"
+      ]
+    },
+    {
+      "id": "36",
+      "image": "https://example.com/mouse2.jpg",
+      "name": "Razer DeathAdder V2 Gaming Mouse",
+      "category": "Others",
+      "price": 69.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "description": "The Razer DeathAdder V2 is an ergonomic gaming mouse with a high-precision optical sensor.",
+      "keyFeatures": [
+        "Wired connectivity",
+        "20,000 DPI Focus+ sensor",
+        "Ergonomic design",
+        "Customizable RGB lighting"
+      ]
+    },
+    {
+      "id": "37",
+      "image": "https://example.com/mouse3.jpg",
+      "name": "SteelSeries Sensei Ten Gaming Mouse",
+      "category": "Others",
+      "price": 79.99,
+      "status": "Out of Stock",
+      "rating": 4.6,
+      "description": "The SteelSeries Sensei Ten is a versatile gaming mouse with a durable design and precise performance.",
+      "keyFeatures": [
+        "Wired connectivity",
+        "18,000 CPI TrueMove Pro sensor",
+        "Ambidextrous design",
+        "Customizable RGB lighting"
+      ]
+    },
+    {
+      "id": "38",
+      "image": "https://example.com/mouse4.jpg",
+      "name": "Corsair Dark Core RGB Pro Gaming Mouse",
+      "category": "Others",
+      "price": 89.99,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The Corsair Dark Core RGB Pro is a wireless gaming mouse with customizable buttons and RGB lighting.",
+      "keyFeatures": [
+        "Wireless connectivity",
+        "18,000 DPI sensor",
+        "Customizable side buttons",
+        "Nine-zone dynamic RGB lighting"
+      ]
+    },
+    {
+      "id": "39",
+      "image": "https://example.com/mouse5.jpg",
+      "name": "HyperX Pulsefire FPS Pro Gaming Mouse",
+      "category": "Others",
+      "price": 49.0,
+      "status": "In Stock",
+      "rating": 4.4,
+      "description": "The HyperX Pulsefire FPS Pro is a reliable and affordable gaming mouse for FPS gamers.",
+      "keyFeatures": [
+        "Wired connectivity",
+        "16,000 DPI Pixart 3389 sensor",
+        "Ergonomic design",
+        "Customizable RGB lighting"
+      ]
+    },
+    {
+      "id": "40",
+      "image": "https://example.com/keyboard1.jpg",
+      "name": "Razer Huntsman Elite Gaming Keyboard",
+      "category": "Others",
+      "price": 199.99,
+      "status": "In Stock",
+      "rating": 4.9,
+      "description": "The Razer Huntsman Elite is a premium gaming keyboard with opto-mechanical switches and customizable RGB lighting.",
+      "keyFeatures": [
+        "Razer Opto-Mechanical switches",
+        "Full programmable keys",
+        "Wrist rest",
+        "Underglow lighting"
+      ]
+    },
+    {
+      "id": "41",
+      "image": "https://example.com/keyboard2.jpg",
+      "name": "Corsair K95 RGB Platinum XT Mechanical Gaming Keyboard",
+      "category": "Others",
+      "price": 169.0,
+      "status": "In Stock",
+      "rating": 4.8,
+      "description": "The Corsair K95 RGB Platinum XT offers an excellent typing and gaming experience with Cherry MX switches.",
+      "keyFeatures": [
+        "Cherry MX switches",
+        "Full programmable keys",
+        "Dedicated media keys",
+        "Detachable wrist rest"
+      ]
+    },
+    {
+      "id": "42",
+      "image": "https://example.com/keyboard3.jpg",
+      "name": "Logitech G Pro X Mechanical Gaming Keyboard",
+      "category": "Others",
+      "price": 149.99,
+      "status": "Out of Stock",
+      "rating": 4.7,
+      "description": "The Logitech G Pro X is a tournament-grade gaming keyboard with swappable mechanical switches.",
+      "keyFeatures": [
+        "Swappable GX mechanical switches",
+        "Detachable USB cable",
+        "Customizable per-key lighting",
+        "Compact tenkeyless design"
+      ]
+    },
+    {
+      "id": "43",
+      "image": "https://example.com/keyboard4.jpg",
+      "name": "SteelSeries Apex Pro TKL Mechanical Gaming Keyboard",
+      "category": "Others",
+      "price": 179.99,
+      "status": "In Stock",
+      "rating": 4.6,
+      "description": "The SteelSeries Apex Pro TKL is a compact mechanical keyboard with adjustable per-key actuation.",
+      "keyFeatures": [
+        "Adjustable OmniPoint switches",
+        "OLED Smart Display",
+        "Detachable wrist rest",
+        "Dynamic RGB lighting"
+      ]
+    },
+    {
+      "id": "44",
+      "image": "https://example.com/keyboard5.jpg",
+      "name": "HyperX Alloy FPS Pro Mechanical Gaming Keyboard",
+      "category": "Others",
+      "price": 79.0,
+      "status": "In Stock",
+      "rating": 4.5,
+      "description": "The HyperX Alloy FPS Pro is a compact and durable mechanical keyboard designed for FPS gaming.",
+      "keyFeatures": [
+        "Cherry MX mechanical key switches",
+        "Ultra-minimalistic tenkeyless design",
+        "Solid steel frame",
+        "Red LED backlighting"
+      ]
+    }
+  ]
+}
