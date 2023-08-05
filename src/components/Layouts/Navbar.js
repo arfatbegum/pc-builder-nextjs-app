@@ -2,7 +2,7 @@ import { AiFillCaretDown } from 'react-icons/ai';
 import { Dropdown, Space } from 'antd';
 import Link from 'next/link';
 import { BiSolidUser } from 'react-icons/bi';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 
 const items = [
     {
@@ -93,7 +93,7 @@ const Navbar = () => {
                         <button className='flex flex-col ml-2 text-sm'>
                             Account
                             {session?.user ? (
-                                <span className='text-xs'>Logout</span>
+                                <span onClick={() => signOut()} className='text-xs'>Logout</span>
                             )
                                 :
                                 (

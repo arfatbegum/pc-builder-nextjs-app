@@ -33,7 +33,7 @@ const PCBuilder = () => {
                             PC Builder - Build Your Own Computer
                         </h1>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center gap-5 px-8 border-b lg:py-0 py-4 border-gray-300 mb-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <BsCpuFill size={45} />
                         </div>
@@ -70,7 +70,7 @@ const PCBuilder = () => {
                             Choose
                         </Link>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center lg:py-0 py-4 gap-5 px-8 border-b  border-gray-300 mb-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <BsFillMotherboardFill size={45} />
                         </div>
@@ -107,7 +107,7 @@ const PCBuilder = () => {
                             Choose
                         </Link>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center lg:py-0 py-4 gap-5 px-8 border-b  border-gray-300 mb-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <CgSmartphoneRam size={45} />
                         </div>
@@ -144,7 +144,7 @@ const PCBuilder = () => {
                             Choose
                         </Link>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center lg:py-0 py-4 gap-5 px-8 border-b  border-gray-300 mb-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <ImPowerCord size={45} />
                         </div>
@@ -181,7 +181,7 @@ const PCBuilder = () => {
                             Choose
                         </Link>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center lg:py-0 py-4 gap-5 px-8 border-b  border-gray-300 mb-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <MdStorage size={45} />
                         </div>
@@ -218,7 +218,7 @@ const PCBuilder = () => {
                             Choose
                         </Link>
                     </div>
-                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                    <div className="grid lg:grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4 lg:py-0 py-4">
                         <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <FiMonitor size={45} />
                         </div>
