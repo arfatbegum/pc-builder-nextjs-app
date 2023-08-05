@@ -2,6 +2,7 @@ import { AiFillCaretDown } from 'react-icons/ai';
 import { Dropdown, Space } from 'antd';
 import Link from 'next/link';
 import { BiSolidUser } from 'react-icons/bi';
+import { useSession } from 'next-auth/react';
 
 const items = [
     {
@@ -58,6 +59,8 @@ const items = [
     },
 ];
 const Navbar = () => {
+    const { data: session } = useSession();
+
     return (
         <header class="text-white body-font">
             <div class="bg-green-600 container mx-auto flex flex-wrap p-5 md:flex-row flex-col items-center justify-between">
@@ -89,7 +92,13 @@ const Navbar = () => {
                         <BiSolidUser className='text-3xl' />
                         <button className='flex flex-col ml-2 text-sm'>
                             Account
-                            <span className='text-xs'>Register/Login</span>
+                            {session?.user ? (
+                                <span className='text-xs'>Logout</span>
+                            )
+                                :
+                                (
+                                    <span className='text-xs'>Register/Login</span>
+                                )}
                         </button>
                     </div>
                 </div>
