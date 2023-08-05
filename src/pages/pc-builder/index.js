@@ -6,8 +6,23 @@ import { FiMonitor } from "react-icons/fi";
 import ReactStars from "react-rating-stars-component";
 import Image from "next/image";
 import RootLayout from "@/components/Layouts/RootLayout";
+import Link from "next/link";
+import { useSelector } from "react-redux";
+import { message } from "antd";
 
 const PCBuilder = () => {
+    const {
+        processor,
+        motherboard,
+        ram,
+        psu,
+        storage,
+        monitor,
+    } = useSelector((state) => state.pcBuild);
+
+    const isDisabled = () => {
+        return monitor.name && storage.name && ram.name && processor.name && psu.name && motherboard.name
+    };
 
     return (
         <RootLayout >
@@ -18,55 +33,50 @@ const PCBuilder = () => {
                             PC Builder - Build Your Own Computer
                         </h1>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 mb-4">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <BsCpuFill size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">Processor</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
-                                <div className="flex justify-between items-center gap-2  p-2">
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">Processor</p>
+                            {processor && processor.name ? (
+                                <div className="flex justify-between items-center gap-2 p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
-                                            <Image src="" height={35} width={35} alt="" />
+                                            <Image src={processor.image} height={35} width={35} alt="" />
                                         </div>
-                                        <div className="flex justify-between w-full gap-3">
+                                        <div className="flex justify-between w-full gap-2">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{processor.name}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={processor.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                ${processor.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/processor"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 mb-4">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <BsFillMotherboardFill size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">Motherboard</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">Motherboard</p>
+                            {motherboard && motherboard.name ? (
                                 <div className="flex justify-between items-center gap-2  p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
@@ -74,40 +84,36 @@ const PCBuilder = () => {
                                         </div>
                                         <div className="flex justify-between w-full gap-3">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{motherboard.name}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={motherboard.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                $ {motherboard.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/motherboard"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 mb-4">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <CgSmartphoneRam size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">RAM</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">RAM</p>
+                            {ram && ram.name ? (
                                 <div className="flex justify-between items-center gap-2  p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
@@ -115,40 +121,36 @@ const PCBuilder = () => {
                                         </div>
                                         <div className="flex justify-between w-full gap-3">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{ram.name}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={ram.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                ${ram.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/ram"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 mb-4">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <ImPowerCord size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">Power Suply Unit</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">Power Suply Unit</p>
+                            {psu && psu.name ? (
                                 <div className="flex justify-between items-center gap-2  p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
@@ -156,40 +158,36 @@ const PCBuilder = () => {
                                         </div>
                                         <div className="flex justify-between w-full gap-3">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{psu.name}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={psu.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                ${psu.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/psu"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 pb-2 mb-2">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <MdStorage size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">Storage Device</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">Storage Device</p>
+                            {storage && storage.name ? (
                                 <div className="flex justify-between items-center gap-2  p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
@@ -197,40 +195,36 @@ const PCBuilder = () => {
                                         </div>
                                         <div className="flex justify-between w-full gap-3">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{storage.name}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={storage.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                ${storage.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/storage"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
-                    <div className="flex justify-between items-center gap-2 px-8 border-b w-full border-gray-300 mb-4">
-                        <div className=" text-green-600 shadow-gray-400 flex flex-col p-4 items-center rounded-md transition-all duration-200 bg-green-100">
+                    <div className="grid grid-cols-6 items-center gap-5 px-8 border-b  border-gray-300 mb-4">
+                        <div className="col-span-1 text-green-600 shadow-gray-400 text-center mx-auto mb-3 p-4 rounded-md bg-green-100">
                             <FiMonitor size={45} />
                         </div>
-                        <div>
-                            <div role="status" className="max-w-sm animate-pulse">
-                                <p className="mb-1 text-sm text-black">Monitor</p>
-                                <div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>
+                        <div className="w-full col-span-4">
+                            <p className="mb-1 text-sm text-black">Monitor</p>
+                            {monitor && monitor.name ? (
                                 <div className="flex justify-between items-center gap-2  p-2">
                                     <div className="flex items-center w-full">
                                         <div className="flex flex-col w-full max-w-[90px] items-center rounded-md transition-all duration-200">
@@ -238,42 +232,42 @@ const PCBuilder = () => {
                                         </div>
                                         <div className="flex justify-between w-full gap-3">
                                             <div>
-                                                <p className="font-medium">cpu.name</p>
-                                                <div className='flex justify-center opacity-100 mb-3'>
-                                                    <ReactStars
-                                                        count={5}
-                                                        size={20}
-                                                        value={3}
-                                                        edit={false}
-                                                        activeColor="#e6bd00"
-                                                    />
-                                                </div>
+                                                <p className="font-medium">{monitor.name}</p>
+
+                                                <ReactStars
+                                                    count={5}
+                                                    size={20}
+                                                    value={monitor.rating}
+                                                    edit={false}
+                                                    activeColor="#e6bd00"
+                                                />
                                             </div>
                                             <p className="text-red-500 font-medium whitespace-nowrap">
-                                                cpu.price / -
+                                                ${monitor.price}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            ) : (<div className="h-6 bg-gray-200 rounded-md dark:bg-gray-300 w-36 md:w-64 lg:w-96"></div>)}
                         </div>
-                        <button
-                            onClick={() => router.push("/choose/cpu")}
-                            className="bg-green-600 font-medium text-xs text-white py-2 cursor-pointer px-3 rounded"
+                        <Link href="/choose/monitor"
+                            className="bg-green-600 font-medium text-xs text-white text-center py-2 cursor-pointer px-3 rounded"
                         >
                             Choose
-                        </button>
+                        </Link>
                     </div>
                     <div className="text-right mx-8">
                         <button
-                            className=" bg-gray-900 text-white px-4 py-1.5 my-5 font-medium rounded-sm"
+                            disabled={!isDisabled()}
+                            onClick={() => message.success("Build completed successfully")}
+                            className={`${isDisabled() ? "bg-green-600" : "bg-gray-900"} text-white px-4 py-1.5 my-5 font-medium rounded-sm`}
                         >
                             Complete Build
                         </button>
                     </div>
                 </div>
             </div>
-        </RootLayout>
+        </RootLayout >
     );
 };
 
