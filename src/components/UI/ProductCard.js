@@ -7,13 +7,17 @@ import Image from "next/image";
 
 const ProductCard = ({ product }) => {
 
-    const { _id, name, image, category, price, status, rating } = product;
+    const { _id, name, image, category, price, status, reviews } = product;
+    // Calculate average rating
+    const totalReviews = reviews?.length;
+    const averageRating = totalReviews ? reviews.reduce((acc, review) => acc + review.rating, 0) / totalReviews : 0;
 
     return (
         <div className="group group-hover:bg-opacity-60 transition duration-500 relative bg-white border-2 border-gray-100 flex justify-center items-center shadow-sm">
             <div className="text-center h-full overflow-hidden">
-                <Image className="w-full object-cover object-center" src={image} alt="img" width={500} height={500}
-                />
+                <div className="image-container">
+                    <Image width={500} height={500} layout="responsive" src={image} alt="img" />
+                </div>
                 <div className="p-4">
                     <span className="text-sm font-semibold text-green-600">{category}</span>
                     <h5 className="text-md font-semibold tracking-tight text-gray-700 mb-1 capitalize">{name?.slice(0, 20)}</h5>
@@ -23,7 +27,7 @@ const ProductCard = ({ product }) => {
                         <ReactStars
                             count={5}
                             size={22}
-                            value={rating}
+                            value={averageRating}
                             edit={false}
                             activeColor="#e6bd00"
                         />

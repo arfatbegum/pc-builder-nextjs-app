@@ -18,7 +18,7 @@ const ProductDetails = ({ product }) => {
             <div>
                 <div className='px-10'>
                     <div className="lg:flex justify-start w-full bg-white lg:p-8 md:p-4 p-2">
-                        <Image width={400} height={400} className="w-[600px] object-cover object-center" src={product?.image} alt="img" />
+                        <Image width={500} height={500} className="w-[600px] object-cover object-center" src={product?.data?.image} alt="img" />
                         <ProductInfo product={product} />
                     </div>
                     <div class="text-gray-700 body-font">

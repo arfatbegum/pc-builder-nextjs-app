@@ -9,7 +9,9 @@ import { FiHeart } from "react-icons/fi";
 
 const ChooseProduct = ({ product }) => {
     const dispatch = useDispatch();
-    const { _id, name, category, price, image, status, rating } = product || {};
+    const { _id, name, category, price, image, status, reviews } = product || {};
+    const totalReviews = reviews?.length;
+    const averageRating = totalReviews ? reviews.reduce((acc, review) => acc + review.rating, 0) / totalReviews : 0;
 
     const router = useRouter();
     const handleBuilder = () => {
@@ -34,7 +36,7 @@ const ChooseProduct = ({ product }) => {
                             <ReactStars
                                 count={5}
                                 size={22}
-                                value={rating}
+                                value={averageRating}
                                 edit={false}
                                 activeColor="#e6bd00"
                             />

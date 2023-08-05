@@ -2,6 +2,7 @@ import Head from "next/head";
 import RootLayout from "@/components/Layouts/RootLayout";
 import FeaturedProducts from "@/components/UI/FeaturedProducts";
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
+import HeroSection from "@/components/UI/HeroSection";
 
 const HomePage = ({ categories, products }) => {
   return (
@@ -16,6 +17,7 @@ const HomePage = ({ categories, products }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RootLayout>
+        <HeroSection />
         <FeaturedProducts products={products} />
         <FeaturedCategories categories={categories} />
       </RootLayout>
