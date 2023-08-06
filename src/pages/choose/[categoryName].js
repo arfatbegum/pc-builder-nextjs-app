@@ -29,24 +29,13 @@ ProductCategory.getLayout = function getLayout(page) {
 
 export default ProductCategory;
 
-export const getStaticPaths = async () => {
-    const res = await fetch("http://localhost:3000/api/categories");
-    const categories = await res.json();
-
-    const paths = categories?.data?.map((category) => ({
-        params: { categoryName: category?.name.toLowerCase() },
-    }));
-    return {
-        paths,
-        fallback: false,
-    };
-};
-
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
     const category = params.categoryName;
-    const res = await fetch(`http://localhost:3000/api/products?category=${category}`);
+    const res = await fetch(`${process.env.URL}/api/products?category=${category}`);
     const products = await res.json();
     return {
-        props: { products },
+        props: {
+            products
+        },
     };
 };

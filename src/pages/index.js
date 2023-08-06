@@ -32,8 +32,8 @@ HomePage.getLayout = function getLayout(page) {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const categoryResponse = await fetch(`http://localhost:3000/api/categories`);
-  const productRespons = await fetch(`http://localhost:3000/api/products`);
+  const categoryResponse = await fetch(`${process.env.URL}/api/categories`);
+  const productRespons = await fetch(`${process.env.URL}/api/products`);
 
   const categories = await categoryResponse.json();
   const products = await productRespons.json();

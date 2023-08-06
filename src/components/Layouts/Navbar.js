@@ -97,7 +97,7 @@ const Navbar = () => {
                             )
                                 :
                                 (
-                                    <span className='text-xs'>Register/Login</span>
+                                    <Link href="/login" className='text-xs'>Register/Login</Link>
                                 )}
                         </button>
                     </div>

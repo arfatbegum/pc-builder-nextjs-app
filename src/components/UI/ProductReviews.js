@@ -23,7 +23,7 @@ const ProductReviews = ({ product }) => {
                                     />
                                 </div>
                                 <div className="flex flex-col justify-start items-start space-y-2">
-                                    <p className="text-base font-medium leading-none text-gray-800">{review?.user}</p>
+                                    <p className="text-base font-medium leading-none text-gray-800">{review?.username}</p>
                                     <p className="text-sm leading-none text-gray-600">2 August 2023</p>
                                 </div>
                             </div>
